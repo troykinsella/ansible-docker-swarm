@@ -1,0 +1,8 @@
+---
+docker_swarm_container_name: swarm
+docker_swarm_image_name: swarm
+docker_swarm_binary_path: /usr/local/bin/docker-swarm
+docker_swarm_binary_mode: "0755"
+docker_swarm_binary_user: root
+docker_swarm_binary_group: root
+docker_swarm_lazy_install: yes

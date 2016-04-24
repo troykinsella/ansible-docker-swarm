@@ -1,0 +1,15 @@
+---
+- name: fetch image
+  docker:
+    name: "{{ docker_swarm_container_name }}"
+    image: "{{ docker_swarm_image_name }}"
+    state: present
+  when: not docker_swarm_lazy_install
+
+- name: create binary
+  copy:
+    src: docker-swarm
+    dest: "{{ docker_swarm_binary_path }}"
+    owner: "{{ docker_swarm_binary_user }}"
+    group: "{{ docker_swarm_binary_group }}"
+    mode: "{{ docker_swarm_binary_mode }}"
